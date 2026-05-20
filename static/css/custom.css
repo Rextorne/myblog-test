@@ -1,7 +1,13 @@
-/* Post Titles in Overviews (Home, Lists, etc.) */
+/* Overview Header Titles (e.g., "Blogs", "Projects" on list pages) */
+.overview-heading h1,
+.overview-heading .h1 {
+  color: orange !important;
+}
+
+/* Post Titles in Overviews (Home, Lists, Archive, Search) */
 .post-preview .post-title,
-.see-also-item-title,
 .archive-item-title,
+.see-also-item-title,
 .result-title {
-  color: orange;
+  color: orange !important;
 }
