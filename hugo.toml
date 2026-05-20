@@ -5,8 +5,8 @@ baseurl = "https://example.com/"
 title = "My Site"
 
 [Params]
-  subtitle = "Build a beautiful and simple website in minutes"
-  mainSections = ["posts", "projects"]
+  subtitle = "My personal blog and projects"
+  mainSections = ["blog", "projects"]
   logo = "/img/avatar-icon.png"
   favicon = "/img/favicon.ico"
   dateFormat = "2 January 2006"
@@ -18,6 +18,21 @@ title = "My Site"
 
   [Params.search]
     provider = "fuse"
+
+[[menu.main]]
+    name = "Blog"
+    url = "blog/"
+    weight = 1
+
+[[menu.main]]
+    name = "Projects"
+    url = "projects/"
+    weight = 2
+
+[[menu.main]]
+    name = "Tags"
+    url = "tags/"
+    weight = 3
 
 [Params.author]
   name = "Nico Rudolph"
