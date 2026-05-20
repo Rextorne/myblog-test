@@ -1,4 +1,35 @@
-baseURL = 'https://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
 theme = 'beautifulhugo'
+
+baseurl = "https://example.com/"
+title = "My Site"
+
+[Params]
+  subtitle = "Build a beautiful and simple website in minutes"
+  mainSections = ["posts", "projects"]
+  logo = "/img/avatar-icon.png"
+  favicon = "/img/favicon.ico"
+  dateFormat = "2 January 2006"
+  colorScheme = "auto"
+  readingTime = true
+  socialShare = true
+  showRelatedPosts = true
+  rss = true
+
+  [Params.search]
+    provider = "fuse"
+
+[Params.author]
+  name = "Nico Rudolph"
+  website = "yourwebsite.com"
+  email = "youremail@domain.com"
+  github = "Rextorne"
+
+[markup.highlight]
+  noClasses = false
+
+[markup.goldmark.parser.attribute]
+  block = true
+
+[markup.goldmark.renderer]
+  unsafe = true
