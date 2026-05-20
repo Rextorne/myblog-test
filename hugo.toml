@@ -18,8 +18,8 @@ title = "Blog"
     provider = "fuse"
 
 [[menu.main]]
-    name = "Blog"
-    url = "blog/"
+    name = "Blogs"
+    url = "blogs/"
     weight = 1
 
 [[menu.main]]
