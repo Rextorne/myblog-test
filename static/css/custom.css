@@ -1,0 +1,7 @@
+/* Post Titles in Overviews (Home, Lists, etc.) */
+.post-preview .post-title,
+.see-also-item-title,
+.archive-item-title,
+.result-title {
+  color: orange;
+}

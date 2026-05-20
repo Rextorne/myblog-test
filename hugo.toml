@@ -2,7 +2,7 @@ languageCode = 'en-us'
 theme = 'beautifulhugo'
 
 baseurl = "https://example.com/"
-title = "My Site"
+title = "Blog"
 
 [Params]
   subtitle = "My personal blog and projects"
@@ -12,8 +12,6 @@ title = "My Site"
   dateFormat = "2 January 2006"
   colorScheme = "auto"
   readingTime = true
-  socialShare = true
-  showRelatedPosts = true
   rss = true
 
   [Params.search]
