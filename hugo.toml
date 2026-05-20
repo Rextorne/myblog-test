@@ -6,7 +6,7 @@ title = "Blog"
 
 [Params]
   subtitle = "My personal blog and projects"
-  mainSections = ["blog", "projects"]
+  mainSections = ["blogs", "projects"]
   logo = "/img/avatar-icon.png"
   favicon = "/img/favicon.ico"
   dateFormat = "2 January 2006"
