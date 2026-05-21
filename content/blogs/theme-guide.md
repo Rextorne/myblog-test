@@ -2,7 +2,7 @@
 title: "Mastering the Beautiful Hugo Theme"
 subtitle: "A comprehensive guide to code blocks, info blocks, and advanced layout features"
 date: 2026-05-20
-author: "Nico Rudolph"
+author: "Nico"
 tags: ["hugo", "theme", "guide"]
 categories: ["tutorial"]
 ---
