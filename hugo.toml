@@ -7,8 +7,6 @@ title = "Blog"
 [Params]
   subtitle = "My personal blog and projects"
   mainSections = ["blogs", "projects"]
-  logo = "/img/avatar-icon.png"
-  favicon = "/img/favicon.ico"
   dateFormat = "2 January 2006"
   colorScheme = "auto"
   readingTime = true
@@ -33,9 +31,7 @@ title = "Blog"
     weight = 3
 
 [Params.author]
-  name = "Nico Rudolph"
-  website = "yourwebsite.com"
-  email = "youremail@domain.com"
+  name = "Nico"
   github = "Rextorne"
 
 [markup.highlight]

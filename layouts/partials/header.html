@@ -5,6 +5,14 @@
 {{- $contentColClass := cond .Params.fullWidth "col-12" "col-md-10 offset-md-1" }}
 {{- $mainSections := default (slice "post" "posts") site.Params.mainSections }}
 {{- $isMainContent := in $mainSections .Type }}
+{{- $heading_class := .Type }}
+{{- if not (in (slice "post" "posts" "page" "tags" "categories" "search") $heading_class) }}
+  {{- if and .IsPage $isMainContent }}
+    {{- $heading_class = "post" }}
+  {{- else }}
+    {{- $heading_class = "page" }}
+  {{- end }}
+{{- end }}
 {{ if .IsHome }}
   {{- $title = .Site.Params.homeTitle | default .Site.Title }}
   {{- $subtitle = .Site.Params.subtitle }}
@@ -38,7 +46,7 @@
         <div class="container">
           <div class="row">
             <div class="{{$contentColClass}}">
-              <div class="{{ .Type }}-heading{{ if not .IsPage }} overview-heading{{ end }}">
+              <div class="{{ $heading_class }}-heading{{ if not .IsPage }} overview-heading{{ end }}">
                 <h1>{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
                 {{ if not $isMainContent }}
                   <hr class="small">
@@ -59,7 +67,7 @@
       <div class="container">
         <div class="row">
           <div class="{{$contentColClass}}">
-            <div class="{{ .Type }}-heading{{ if not .IsPage }} overview-heading{{ end }}">
+            <div class="{{ $heading_class }}-heading{{ if not .IsPage }} overview-heading{{ end }}">
               {{ if $bigimg }}
               <span class="h1">{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</span>
               {{ else }}

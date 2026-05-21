@@ -1,0 +1,20 @@
+{{- $subtitle := .Subtitle }}
+{{- $ctx := .Context }}
+{{- $mainSections := default (slice "post" "posts") site.Params.mainSections }}
+{{- $isMainContent := in $mainSections $ctx.Type }}
+{{- $type := $ctx.Type }}
+{{- if not (in (slice "post" "posts" "page" "tags" "categories" "search") $type) }}
+  {{- if and $ctx.IsPage $isMainContent }}
+    {{- $type = "post" }}
+  {{- else }}
+    {{- $type = "page" }}
+  {{- end }}
+{{- end }}
+
+{{ if $subtitle }}
+  {{ if eq $type "page" }}
+    <span class="{{ $type }}-subheading">{{ $subtitle }}</span>
+  {{ else }}
+    <h2 class="{{ $type }}-subheading">{{ $subtitle }}</h2>
+  {{ end }}
+{{ end }}
